@@ -4,9 +4,11 @@ import washingMachine from "../../../public/images/washing-machine.jpg";
 import { Button } from "../ui/button";
 import Map from "./Map";
 import { AnimatedText } from "../animated/AnimatedText";
+
 type Props = {};
 
 const Hero = (props: Props) => {
+
   return (
     <div className="grid grid-cols-2 gap-10 h-screen items-center  -mt-20">
       <div className="flex flex-col gap-12 text-start">

@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 
 const FADE_INTERVAL_MS = 1750;

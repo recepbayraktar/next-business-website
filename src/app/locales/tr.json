@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "services": "Hizmetler",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "logout": "Çıkış Yap",
+    "profile": "Profil",
+    "dashboard": "Panel"
+  }
+}

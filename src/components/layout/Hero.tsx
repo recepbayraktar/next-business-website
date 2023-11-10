@@ -1,6 +1,6 @@
+
 import Image from "next/image";
 import React from "react";
-import washingMachine from "../../../public/images/washing-machine.jpg";
 import { Button } from "../ui/button";
 import Map from "./Map";
 import { AnimatedText } from "../animated/AnimatedText";

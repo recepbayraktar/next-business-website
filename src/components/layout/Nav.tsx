@@ -1,17 +1,32 @@
-import Link from "next/link";
+'use client';
+import Link from 'next-intl/link';
 import { Button } from "../ui/button";
 import { AlignJustify, HelpCircle, Sun, User2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
+import {usePathname} from 'next-intl/client';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useTranslations } from "next-intl";
+
+
 
 export default function Nav() {
   const { setTheme, theme } = useTheme();
-  const pathName = usePathname();
+
+  const pathName = usePathname()
+  const t = useTranslations('nav');
   const handleThemeChange = () => {
     if (theme === "dark") {
       setTheme("light");
     } else {
+
       setTheme("dark");
     }
   };
@@ -26,28 +41,38 @@ export default function Nav() {
         <ul className="w-full hidden md:flex justify-between   ">
           <li>
             <Button asChild variant={"ghost"}>
-              <Link className={pathName == "/" ? "text-primary" : ""} href="/">
-                Home
+              <Link
+
+                className={pathName == "/" ? "text-primary" : ""} href="/">
+                {
+                  t("home")
+                }
               </Link>
             </Button>
           </li>
           <li>
             <Button asChild variant={"ghost"}>
               <Link
+
                 className={pathName == "/services" ? "text-primary" : ""}
-                href="/services"
+                href={"/services"}
               >
-                Services
+                {
+                  t("services")
+                }
               </Link>
             </Button>
           </li>
           <li>
             <Button asChild variant={"ghost"}>
               <Link
+
                 className={pathName == "/about-us" ? "text-primary" : ""}
-                href="/about-us"
+                href={"/about-us"}
               >
-                About
+                {
+                  t("about")
+                }
               </Link>
             </Button>
           </li>
@@ -55,9 +80,11 @@ export default function Nav() {
             <Button asChild variant={"ghost"}>
               <Link
                 className={pathName == "/contact" ? "text-primary" : ""}
-                href="/about-us"
+                href={"/about-us"}
               >
-                Contact
+                {
+                  t("contact")
+                }
               </Link>
             </Button>
           </li>
@@ -74,9 +101,35 @@ export default function Nav() {
             </Button>
           </li>
           <li>
-            <Button variant={"ghost"} size={"icon"}>
-              <HelpCircle size={16} />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant={"ghost"} size={"icon"}>
+                  <HelpCircle size={16} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+               
+                  <DropdownMenuItem >
+                    <Link href={pathName} locale={'tr'}>
+                      <DropdownMenuLabel>tr</DropdownMenuLabel>
+                    </Link>
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem >
+                    <Link href={pathName} locale={'en'}>
+                      <DropdownMenuLabel>en</DropdownMenuLabel>
+                    </Link>
+                  </DropdownMenuItem>
+
+
+                  <DropdownMenuItem >
+                    <Link href={pathName} locale={'de'}>
+                      <DropdownMenuLabel>de</DropdownMenuLabel>
+                    </Link>
+                  </DropdownMenuItem>
+          
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
 
           <li>
@@ -98,10 +151,12 @@ export default function Nav() {
                   <li>
                     <Button asChild className="w-full" variant={"ghost"}>
                       <Link
-                        className={pathName == "/" ? "text-primary" : ""}
+                        className={pathName == "" ? "text-primary" : ""}
                         href="/"
                       >
-                        Home
+                        {
+                          t("home")
+                        }
                       </Link>
                     </Button>
                   </li>
@@ -111,7 +166,9 @@ export default function Nav() {
                         className={pathName == "/" ? "text-primary" : ""}
                         href="/services"
                       >
-                        Services
+                        {
+                          t("services")
+                        }
                       </Link>
                     </Button>
                   </li>
@@ -121,7 +178,9 @@ export default function Nav() {
                         className={pathName == "/" ? "text-primary" : ""}
                         href="/about-us"
                       >
-                        About
+                        {
+                          t("about")
+                        }
                       </Link>
                     </Button>
                   </li>

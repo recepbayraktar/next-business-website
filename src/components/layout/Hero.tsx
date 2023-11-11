@@ -1,14 +1,9 @@
-
-import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import Map from "./Map";
 import { AnimatedText } from "../animated/AnimatedText";
 
-type Props = {};
-
-const Hero = (props: Props) => {
-
+function Hero() {
   return (
     <div className="grid grid-cols-2 gap-10 h-screen items-center  -mt-20">
       <div className="flex flex-col gap-12 text-start">
@@ -31,6 +26,6 @@ const Hero = (props: Props) => {
       <Map className=" lg:w-full  lg:h-3/4 border-4 border-primary rounded-sm" />
     </div>
   );
-};
+}
 
 export default Hero;

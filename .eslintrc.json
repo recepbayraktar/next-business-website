@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [ "prettier", "next/core-web-vitals" ],
+    "ignorePatterns":["**prettier-sample.js"],
+    "rules": {
+     
+      "no-unused-vars":"error",
+      "no-undef":"error"
+    }
 }

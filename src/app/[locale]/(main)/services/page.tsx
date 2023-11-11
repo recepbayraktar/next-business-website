@@ -1,17 +1,7 @@
+import React from "react";
 
+const Page = () => {
+  return <div></div>;
+};
 
-import React from 'react'
-
-
-const Page =  ({ params: { lang } }: { params: { lang: string } }) => {
-
-
-  return (
-    <div>
-  
-
-    </div>
-  )
-}
-
-export default Page
+export default Page;

@@ -1,32 +1,29 @@
-'use client';
-import Link from 'next-intl/link';
-import { Button } from "../ui/button";
+"use client";
+
+import Link from "next-intl/link";
 import { AlignJustify, HelpCircle, Sun, User2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {usePathname} from 'next-intl/client';
+import { usePathname } from "next-intl/client";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTranslations } from "next-intl";
-
-
+import { Button } from "../ui/button";
 
 export default function Nav() {
   const { setTheme, theme } = useTheme();
 
-  const pathName = usePathname()
-  const t = useTranslations('nav');
+  const pathName = usePathname();
+  const t = useTranslations("nav");
   const handleThemeChange = () => {
     if (theme === "dark") {
       setTheme("light");
     } else {
-
       setTheme("dark");
     }
   };
@@ -40,51 +37,39 @@ export default function Nav() {
 
         <ul className="w-full hidden md:flex justify-between   ">
           <li>
-            <Button asChild variant={"ghost"}>
-              <Link
-
-                className={pathName == "/" ? "text-primary" : ""} href="/">
-                {
-                  t("home")
-                }
+            <Button asChild variant="ghost">
+              <Link className={pathName === "/" ? "text-primary" : ""} href="/">
+                {t("home")}
               </Link>
             </Button>
           </li>
           <li>
-            <Button asChild variant={"ghost"}>
+            <Button asChild variant="ghost">
               <Link
-
-                className={pathName == "/services" ? "text-primary" : ""}
-                href={"/services"}
+                className={pathName === "/services" ? "text-primary" : ""}
+                href="/services"
               >
-                {
-                  t("services")
-                }
+                {t("services")}
               </Link>
             </Button>
           </li>
           <li>
-            <Button asChild variant={"ghost"}>
+            <Button asChild variant="ghost">
               <Link
-
-                className={pathName == "/about-us" ? "text-primary" : ""}
-                href={"/about-us"}
+                className={pathName === "/about-us" ? "text-primary" : ""}
+                href="/about-us"
               >
-                {
-                  t("about")
-                }
+                {t("about")}
               </Link>
             </Button>
           </li>
           <li>
-            <Button asChild variant={"ghost"}>
+            <Button asChild variant="ghost">
               <Link
-                className={pathName == "/contact" ? "text-primary" : ""}
-                href={"/about-us"}
+                className={pathName === "/contact" ? "text-primary" : ""}
+                href="/about-us"
               >
-                {
-                  t("contact")
-                }
+                {t("contact")}
               </Link>
             </Button>
           </li>
@@ -94,8 +79,8 @@ export default function Nav() {
             <Button
               className="border"
               onClick={handleThemeChange}
-              variant={"ghost"}
-              size={"icon"}
+              variant="ghost"
+              size="icon"
             >
               <Sun size={16} />
             </Button>
@@ -103,37 +88,34 @@ export default function Nav() {
           <li>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant={"ghost"} size={"icon"}>
+                <Button variant="ghost" size="icon">
                   <HelpCircle size={16} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-               
-                  <DropdownMenuItem >
-                    <Link href={pathName} locale={'tr'}>
-                      <DropdownMenuLabel>tr</DropdownMenuLabel>
-                    </Link>
-                  </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href={pathName} locale="tr">
+                    <DropdownMenuLabel>tr</DropdownMenuLabel>
+                  </Link>
+                </DropdownMenuItem>
 
-                  <DropdownMenuItem >
-                    <Link href={pathName} locale={'en'}>
-                      <DropdownMenuLabel>en</DropdownMenuLabel>
-                    </Link>
-                  </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link href={pathName} locale="en">
+                    <DropdownMenuLabel>en</DropdownMenuLabel>
+                  </Link>
+                </DropdownMenuItem>
 
-
-                  <DropdownMenuItem >
-                    <Link href={pathName} locale={'de'}>
-                      <DropdownMenuLabel>de</DropdownMenuLabel>
-                    </Link>
-                  </DropdownMenuItem>
-          
+                <DropdownMenuItem>
+                  <Link href={pathName} locale="de">
+                    <DropdownMenuLabel>de</DropdownMenuLabel>
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </li>
 
           <li>
-            <Button variant={"ghost"} size={"icon"}>
+            <Button variant="ghost" size="icon">
               <User2 size={16} />
             </Button>
           </li>
@@ -141,7 +123,7 @@ export default function Nav() {
         <div className="flex justify-end   md:hidden ">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size={"icon"}>
+              <Button variant="outline" size="icon">
                 <AlignJustify size={16} />
               </Button>
             </SheetTrigger>
@@ -149,38 +131,32 @@ export default function Nav() {
               <div className="w-full h-full flex flex-col  ">
                 <ul>
                   <li>
-                    <Button asChild className="w-full" variant={"ghost"}>
+                    <Button asChild className="w-full" variant="ghost">
                       <Link
-                        className={pathName == "" ? "text-primary" : ""}
+                        className={pathName === "" ? "text-primary" : ""}
                         href="/"
                       >
-                        {
-                          t("home")
-                        }
+                        {t("home")}
                       </Link>
                     </Button>
                   </li>
                   <li>
-                    <Button asChild className="w-full" variant={"ghost"}>
+                    <Button asChild className="w-full" variant="ghost">
                       <Link
-                        className={pathName == "/" ? "text-primary" : ""}
+                        className={pathName === "/" ? "text-primary" : ""}
                         href="/services"
                       >
-                        {
-                          t("services")
-                        }
+                        {t("services")}
                       </Link>
                     </Button>
                   </li>
                   <li>
-                    <Button asChild className="w-full" variant={"ghost"}>
+                    <Button asChild className="w-full" variant="ghost">
                       <Link
-                        className={pathName == "/" ? "text-primary" : ""}
+                        className={pathName === "/" ? "text-primary" : ""}
                         href="/about-us"
                       >
-                        {
-                          t("about")
-                        }
+                        {t("about")}
                       </Link>
                     </Button>
                   </li>
@@ -189,12 +165,12 @@ export default function Nav() {
                   <Button
                     className="border"
                     onClick={handleThemeChange}
-                    variant={"ghost"}
-                    size={"icon"}
+                    variant="ghost"
+                    size="icon"
                   >
                     <Sun size={16} />
                   </Button>
-                  <Button variant={"ghost"} size={"icon"}>
+                  <Button variant="ghost" size="icon">
                     <HelpCircle size={16} />
                   </Button>
                 </div>

@@ -1,8 +1,10 @@
 "use client";
+
 import Footer from "@/components/layout/Footer";
 import Nav from "@/components/layout/Nav";
 import { AnimatePresence, Spring, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 const transitionSpringPhysics: Spring = {
   type: "spring",
@@ -10,8 +12,6 @@ const transitionSpringPhysics: Spring = {
   stiffness: 80,
   damping: 10,
 };
-
-
 
 export default function RootLayout({
   children,
@@ -24,7 +24,7 @@ export default function RootLayout({
       <motion.div key={pathname}>
         <motion.div
           style={{
-            backgroundColor:  "rgba(0, 0, 0, 0.6)",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
             position: "fixed",
             width: "100vw",
             zIndex: 1000,
@@ -35,11 +35,11 @@ export default function RootLayout({
           exit={{ height: "100vh", display: "flex" }}
           className="flex justify-center items-center text-white text-2xl"
         >
-      LOGO
+          LOGO
         </motion.div>
         <motion.div
           style={{
-            backgroundColor:  "rgba(0, 0, 0, 0.6)",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
             position: "fixed",
             width: "100vw",
             zIndex: 1000,
@@ -51,10 +51,9 @@ export default function RootLayout({
         />
 
         <Nav />
-          <main className="min-h-screen max-w-7xl md:mx-auto mx-4 ">
-            
-        {children}
-          </main>
+        <main className="min-h-screen max-w-7xl md:mx-auto mx-4 ">
+          {children}
+        </main>
 
         <Footer />
       </motion.div>

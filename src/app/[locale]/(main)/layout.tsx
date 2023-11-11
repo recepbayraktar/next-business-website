@@ -1,13 +1,11 @@
 "use client";
-
-import Footer from "@/components/layout/Footer";
 import { AnimatePresence, Spring, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 const transitionSpringPhysics: Spring = {
   type: "spring",
-  mass: 0.2,
+  mass: 0.1,
   stiffness: 80,
   damping: 10,
 };
@@ -23,7 +21,7 @@ export default function RootLayout({
       <motion.div key={pathname}>
         <motion.div
           style={{
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            backgroundColor: "#00A8B5",
             position: "fixed",
             width: "100vw",
             zIndex: 1000,
@@ -38,7 +36,7 @@ export default function RootLayout({
         </motion.div>
         <motion.div
           style={{
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            backgroundColor: "#00A8B5",
             position: "fixed",
             width: "100vw",
             zIndex: 1000,
@@ -46,14 +44,10 @@ export default function RootLayout({
           }}
           transition={transitionSpringPhysics}
           initial={{ height: "100vh" }}
-          animate={{ height: "0vh", transition: { delay: 0.05 } }}
+          animate={{ height: "0vh", transition: { delay: 0 } }}
         />
 
-        <main className="min-h-screen max-w-7xl md:mx-auto mx-4 ">
-          {children}
-        </main>
-
-        <Footer />
+        <main className="md:mx-auto min-h-screen">{children}</main>
       </motion.div>
     </AnimatePresence>
   );

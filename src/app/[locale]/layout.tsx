@@ -8,6 +8,7 @@ import siteInfo from "@/constants/siteInfo";
 import React from "react";
 import Nav from "@/components/layout/Nav";
 import ".././globals.css";
+import Footer from "@/components/layout/Footer";
 const koulen = Inter({
   subsets: ["latin"],
   weight: "400",
@@ -47,6 +48,7 @@ export default async function RootLayout({
           >
             <Nav />
             {children}
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

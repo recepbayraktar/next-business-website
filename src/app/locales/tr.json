@@ -9,5 +9,8 @@
     "logout": "Çıkış Yap",
     "profile": "Profil",
     "dashboard": "Panel"
+  },
+  "hero": {
+    "title": "Kıyafetlerinizi en iyisini hak ediyor "
   }
 }

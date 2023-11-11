@@ -1,12 +1,18 @@
 {
-    "nav": {
-        "home": "Home",
-        "about": "About",
-        "contact": "Contact",
-        "services": "Services",
-        "login": "Login",
-        "register": "Register",
-        "logout": "Logout"
-        
-    }
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Your Clothes Deserve the Best: Welcome to ",
+    "subtitle": "The Best Dry Cleaning Service in Town",
+    "description": "We are a family-owned business that has been serving the community for over 20 years. We are committed to providing the best service to our customers. We offer a wide range of services, including dry cleaning, laundry, alterations, and more. Our goal is to make your life easier by providing you with high-quality work at affordable prices. If you have any questions or would like to schedule an appointment, please contact us today!",
+    "appointment": "Schedule an Appointment",
+    "learnMore": "Learn More"
   }
+}

@@ -1,7 +1,6 @@
 "use client";
 
 import Footer from "@/components/layout/Footer";
-import Nav from "@/components/layout/Nav";
 import { AnimatePresence, Spring, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -50,7 +49,6 @@ export default function RootLayout({
           animate={{ height: "0vh", transition: { delay: 0.05 } }}
         />
 
-        <Nav />
         <main className="min-h-screen max-w-7xl md:mx-auto mx-4 ">
           {children}
         </main>

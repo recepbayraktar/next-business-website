@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* THEME */
+body {
+  margin: 0;
+  padding: 0;
+}
 
-/* --background: 0 0% 100%;
---foreground: 222.2 47.4% 11.2%; */
+/* THEME */
 
 :root {
   --background: 0 0% 100%;
@@ -28,9 +30,10 @@
   --destructive-foreground: 210 40% 98%;
   --ring: 215 20.2% 65.1%;
   --radius: 0.5rem;
+  --lime: 68 100% 75%;
 }
 
-
+/* PAGE TRANSITION */
 .fade-in {
   transition: opacity 1s ease;
 }
@@ -38,4 +41,150 @@
 .fade-out {
   opacity: 0;
   transition: opacity 1s ease;
+}
+
+/* BLOB */
+.blob-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.shape-blob {
+  z-index: -1;
+  @apply bg-lime dark:bg-purple;
+  height: 400px;
+  width: 300px;
+  border-radius: 30% 50% 20% 40%;
+  animation:
+    transform 0s ease-in-out infinite both alternate,
+    movement_one 40s ease-in-out infinite both;
+  opacity: 0.5;
+  position: absolute;
+  @media screen and (min-width: 0) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @apply sm:top-0;
+  @apply sm:left-0;
+
+  @apply md:top-0;
+  @apply md:left-0;
+
+  @apply lg:top-40;
+  @apply lg:left-1/2;
+}
+
+.shape-blob.one {
+  height: 500px;
+  width: 500px;
+  transform: rotate(-180deg);
+  animation:
+    transform 30s ease-in-out infinite both alternate,
+    movement_two 60s ease-in-out infinite both;
+
+  @apply sm:top-0;
+  @apply sm:left-0;
+
+  @apply md:top-0;
+  @apply md:left-0;
+
+  @apply lg:top-0;
+  @apply lg:left-0;
+}
+
+.shape-blob.two {
+  height: 350px;
+  width: 350px;
+  transform: rotate(-180deg);
+  animation:
+    transform 30s ease-in-out infinite both alternate,
+    movement_two 60s ease-in-out infinite both;
+}
+
+.shape-blob.three {
+  height: 250px;
+  width: 250px;
+  transform: rotate(-180deg);
+  animation:
+    transform 30s ease-in-out infinite both alternate,
+    movement_three 60s ease-in-out infinite both;
+
+  @apply sm:-top-40;
+  @apply sm:right-0;
+}
+
+.shape-blob.four {
+  height: 150px;
+  width: 150px;
+  left: 500px;
+  top: 500px;
+  transform: rotate(-180deg);
+  animation:
+    transform 30s ease-in-out infinite both alternate,
+    movement_four 60s ease-in-out infinite both;
+}
+
+@keyframes transform {
+  0%,
+  100% {
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+  }
+  20% {
+    border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+  }
+  40% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+  }
+  60% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+  }
+}
+
+@keyframes movement_one {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translate(80%, 40%) rotateY(30deg) scale(1.2);
+  }
+}
+
+@keyframes movement_two {
+  0%,
+  500% {
+    transform: none;
+  }
+  50% {
+    transform: translate(50%, 20%) rotate(-200deg) scale(1.2);
+  }
+}
+
+@keyframes movement_three {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translate(80%, 40%) rotateY(30deg) scale(1.2);
+  }
+}
+
+@keyframes movement_four {
+  0%,
+  500% {
+    transform: none;
+  }
+  50% {
+    transform: translate(50%, 20%) rotate(-200deg) scale(1.2);
+  }
 }

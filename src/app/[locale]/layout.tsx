@@ -6,7 +6,8 @@ import "../globals.css";
 import ThemeProvider from "@/components/ui/theme-provider";
 import siteInfo from "@/constants/siteInfo";
 import React from "react";
-
+import Nav from "@/components/layout/Nav";
+import ".././globals.css";
 const koulen = Inter({
   subsets: ["latin"],
   weight: "400",
@@ -44,6 +45,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Nav />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>

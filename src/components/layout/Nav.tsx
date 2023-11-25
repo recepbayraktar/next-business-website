@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next-intl/link";
-import { AlignJustify, HelpCircle, Sun, User2 } from "lucide-react";
+import { AlignJustify, HelpCircle, Languages, Sun, User2 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next-intl/client";
@@ -89,23 +89,23 @@ export default function Nav() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <HelpCircle size={16} />
+                  <Languages size={16} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href={pathName} locale="tr">
                     <DropdownMenuLabel>tr</DropdownMenuLabel>
                   </Link>
                 </DropdownMenuItem>
 
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href={pathName} locale="en">
                     <DropdownMenuLabel>en</DropdownMenuLabel>
                   </Link>
                 </DropdownMenuItem>
 
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href={pathName} locale="de">
                     <DropdownMenuLabel>de</DropdownMenuLabel>
                   </Link>

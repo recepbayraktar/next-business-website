@@ -37,6 +37,15 @@ html[class="dark"] {
 body {
   margin: 0;
   padding: 0;
+  /*   animation: animName 0.2s linear infinite; */
+}
+@keyframes animName {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* PAGE TRANSITION */

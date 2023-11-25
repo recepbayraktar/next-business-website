@@ -1,6 +1,6 @@
 /* eslint-disable import/no-named-as-default */
 import type { Metadata } from "next";
-import { Bungee } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import "../globals.css";
 import ThemeProvider from "@/components/ui/theme-provider";
@@ -9,7 +9,7 @@ import React from "react";
 import Nav from "@/components/layout/Nav";
 import ".././globals.css";
 import Footer from "@/components/layout/Footer";
-const poppins = Bungee({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: "400",
 });

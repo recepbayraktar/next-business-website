@@ -1,6 +1,6 @@
 /* eslint-disable import/no-named-as-default */
 import type { Metadata } from "next";
-import { Bungee } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import "../globals.css";
 import ThemeProvider from "@/components/ui/theme-provider";
@@ -8,7 +8,8 @@ import siteInfo from "@/constants/siteInfo";
 import React from "react";
 import Nav from "@/components/layout/Nav";
 import ".././globals.css";
-const poppins = Bungee({
+import Footer from "@/components/layout/Footer";
+const poppins = Poppins({
   subsets: ["latin"],
   weight: "400",
 });
@@ -47,6 +48,7 @@ export default async function RootLayout({
           >
             <Nav />
             {children}
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

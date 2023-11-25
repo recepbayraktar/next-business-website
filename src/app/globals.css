@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 /* THEME */
 
 :root {
@@ -31,6 +26,26 @@ body {
   --ring: 215 20.2% 65.1%;
   --radius: 0.5rem;
   --lime: 68 100% 75%;
+  --purple: 255, 51%, 63%;
+}
+
+html[class="dark"] {
+  --primary: 255, 51%, 63%;
+  --primary-foreground: 0 0% 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /*   animation: animName 0.2s linear infinite; */
+}
+@keyframes animName {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* PAGE TRANSITION */

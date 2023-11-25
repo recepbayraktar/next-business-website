@@ -19,8 +19,8 @@ You can download Node.js and npm here: [Node.js Download](https://nodejs.org/en/
 1. Clone the project to your local machine:
 
    ```bash
-   git clone [project-git-url]
-   cd [project-folder]
+   git clone https://github.com/recepbayraktar/next-business-website
+   cd next-business-website
    ```
 
 2. Install the required npm packages:

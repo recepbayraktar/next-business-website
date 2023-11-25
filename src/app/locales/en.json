@@ -18,5 +18,21 @@
     "review1": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!",
     "review2": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!",
     "review3": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!"
+  },
+  "steps": {
+    "title": "How It Works",
+    "subtitle": "Get it done in 4 easy steps",
+    "step1": "Schedule an Appointment",
+    "step2": "We Pick Up Your Clothes",
+    "step3": "We Clean Your Clothes",
+    "step4": "We Deliver Your Clothes",
+    "step1-details-title": "Schedule an Appointment",
+    "step1-details": "Schedule an appointment with us by phone or online. We will come to your home or office and pick up your clothes for you. You can also drop them off at one of our locations if that is more convenient for you.",
+    "step2-details-title": "We Pick Up Your Clothes",
+    "step2-details": "We will pick up your clothes from your home or office and bring them to our facility for cleaning. We will then deliver them back to you when they are ready.",
+    "step3-details-title": "We Clean Your Clothes",
+    "step3-details": "We will clean your clothes using our state-of-the-art equipment and environmentally friendly cleaning products. Our staff is trained to provide the best service possible, so you can rest assured that your clothes will be in good hands.",
+    "step4-details-title": "We Deliver Your Clothes",
+    "step4-details": "We will deliver your clothes back to you when they are ready. You can also pick them up at one of our locations if that is more convenient for you."
   }
 }

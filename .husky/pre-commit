@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo MyScript Working Pre-Commit
-npx lint-staged
+
 #npx eslint ./src --cache --max-warnings=-1
 #npx prettier --write .
 #npm test

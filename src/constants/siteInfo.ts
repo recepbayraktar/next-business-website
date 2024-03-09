@@ -9,17 +9,20 @@ const siteInfo = {
     streetAddress: "Shinjuku",
   },
   contact: {
-    email: "",
-    phone: "",
+    email: "hello@elitlaundry.com",
+    phone: "+90 544 151 45 88",
     fax: "",
     url: "",
+    googleMapsUrl: "",
   },
 
   social: {
     facebook: "",
     instagram: "",
+    twitter: "",
+    whatsapp: "",
+    google: "",
   },
 };
-
 
 export default siteInfo;

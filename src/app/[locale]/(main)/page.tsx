@@ -13,6 +13,24 @@ import {
 } from "@/components/ui/dialog";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { PlusCircleFilled } from "@ant-design/icons";
+
+export default function Home() {
+  return (
+    <div className="flex  flex-col items-center justify-between ">
+      <Hero />
+      <div className=" max-w-7xl"></div>
+      <Steps />
+      <FaqSection />
+      <Map className=" h-96 mt-20 max-w-7xl" />
+    </div>
+  );
+}
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -33,16 +51,6 @@ const item = {
     opacity: 1,
   },
 };
-export default function Home() {
-  return (
-    <div className="flex  flex-col items-center justify-between ">
-      <Hero />
-      <Steps />
-      <Map className=" h-96 mt-20 max-w-7xl" />
-    </div>
-  );
-}
-
 const Steps = () => {
   const [selectedStep, setSelectedStep] = useState<number | undefined>();
   const t = useTranslations("steps");
@@ -112,5 +120,56 @@ const Steps = () => {
         </motion.ul>
       </Dialog>
     </div>
+  );
+};
+
+const FaqSection = () => {
+  return (
+    <div className="max-w-7xl w-full ">
+      <h2 className="text-2xl font-bold text-center my-8">
+        Frequently Asked Questions
+      </h2>
+
+      <Collapsible className="w-full flex flex-col gap-4 ">
+        <FaqQuestion
+          question="How do I place an order?"
+          answer="You can place an order by calling us at 1234567890 or by visiting our website."
+        />
+
+        <FaqQuestion
+          question="How do I place an order?"
+          answer="You can place an order by calling us at 1234567890 or by visiting our website."
+        />
+
+        <FaqQuestion
+          question="How do I place an order?"
+          answer="You can place an order by calling us at 1234567890 or by visiting our website."
+        />
+      </Collapsible>
+    </div>
+  );
+};
+
+const FaqQuestion = ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) => {
+  return (
+    <Collapsible className="w-full  ">
+      <CollapsibleTrigger className="w-full">
+        <div className="flex items-center justify-between w-full p-4 text-lg font-bold text-white bg-primary rounded-t-md">
+          <span>{question}</span>
+          <PlusCircleFilled size={24} />
+        </div>
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <div className="p-4 text-sm font-bold text-black bg-accent rounded-b-md">
+          {answer}
+        </div>
+      </CollapsibleContent>
+    </Collapsible>
   );
 };

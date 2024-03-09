@@ -6,9 +6,10 @@ import "../globals.css";
 import ThemeProvider from "@/components/ui/theme-provider";
 import siteInfo from "@/constants/siteInfo";
 import React from "react";
-import Nav from "@/components/layout/Nav";
-import ".././globals.css";
+/* import Nav from "@/components/layout/Nav"; */
 import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "400",

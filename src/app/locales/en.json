@@ -1,4 +1,15 @@
 {
+  "general": {
+    "workingHours": "Working Hours",
+    "workingHoursMon": "9:00 AM - 5:00 PM",
+    "workingHoursTue": "9:00 AM - 5:00 PM",
+    "workingHoursWed": "9:00 AM - 5:00 PM",
+    "workingHoursThu": "9:00 AM - 5:00 PM",
+    "workingHoursFri": "9:00 AM - 5:00 PM",
+    "workingHoursSat": "9:00 AM - 5:00 PM",
+    "workingHoursSun": "Closed"
+  },
+
   "nav": {
     "home": "Home",
     "about": "About",
@@ -13,11 +24,7 @@
     "subtitle": "The Best Dry Cleaning Service in Town",
     "description": "We are a family-owned business that has been serving the community for over 20 years. We are committed to providing the best service to our customers. We offer a wide range of services, including dry cleaning, laundry, alterations, and more. Our goal is to make your life easier by providing you with high-quality work at affordable prices. If you have any questions or would like to schedule an appointment, please contact us today!",
     "appointment": "Schedule an Appointment",
-    "learnMore": "Learn More",
-    "reviews": "Reviews",
-    "review1": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!",
-    "review2": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!",
-    "review3": "I have been using this dry cleaner for years and they are always friendly, professional, and do a great job. I would recommend them to anyone looking for a reliable dry cleaner in the area!"
+    "learnMore": "Learn More"
   },
   "steps": {
     "title": "How It Works",
